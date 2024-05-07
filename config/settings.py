@@ -37,7 +37,10 @@ INSTALLED_APPS += [
 
 # Разрабатываемые модули
 
-INSTALLED_APPS += []
+INSTALLED_APPS += [
+    'common',
+    'employees',
+]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
