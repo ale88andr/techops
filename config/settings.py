@@ -30,7 +30,8 @@ INSTALLED_APPS = [
 # Сторонние модули
 
 INSTALLED_APPS += [
-    'django_filters'
+    'django_filters',
+    'corsheaders',
 ]
 
 
@@ -46,6 +47,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'config.urls'
@@ -114,3 +116,13 @@ STATIC_URL = 'static/'
 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+##############################
+# CORS HEADERS
+##############################
+
+CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOW_HEAOERS = ['*']
+CSRF_COOKIE_SECURE = False
