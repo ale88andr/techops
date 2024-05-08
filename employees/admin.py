@@ -6,6 +6,7 @@ from employees.models.locations import Location
 from employees.models.organisations import Organisation
 from employees.models.positions import Position
 from employees.models.structures import Structure
+from employees.models.workers import Worker
 
 
 admin.site.site_header = 'TechOps'
@@ -48,3 +49,9 @@ class BuildingAdmin(admin.ModelAdmin):
 class LocationAdmin(admin.ModelAdmin):
     list_display = ('name', )
     list_filter = ['building']
+
+
+@admin.register(Worker)
+class WorkerAdmin(admin.ModelAdmin):
+    list_display = ('short_name', 'position', 'department')
+    list_filter = ['department', 'position', 'location']
