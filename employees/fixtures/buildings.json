@@ -1,0 +1,57 @@
+[
+  {
+    "model": "employees.building",
+    "pk": 1,
+    "fields": {
+      "name": "Музыки",
+      "city": "Севастополь",
+      "street": "Музыки",
+      "number": "60А",
+      "index": "299007"
+    }
+  },
+  {
+    "model": "employees.building",
+    "pk": 2,
+    "fields": {
+      "name": "Киевская",
+      "city": "Севастополь",
+      "street": "Киевская",
+      "number": "11",
+      "index": "299003"
+    }
+  },
+  {
+    "model": "employees.building",
+    "pk": 3,
+    "fields": {
+      "name": "Пожарова",
+      "city": "Севастополь",
+      "street": "Пожарова",
+      "number": "5",
+      "index": "299008"
+    }
+  },
+  {
+    "model": "employees.building",
+    "pk": 4,
+    "fields": {
+      "name": "Урицкого",
+      "city": "Севастополь",
+      "street": "Урицкого",
+      "number": "2",
+      "index": "299018"
+    }
+  },
+  {
+    "model": "employees.building",
+    "pk": 5,
+    "fields": {
+      "name": "Дзержинского",
+      "city": "Севастополь",
+      "street": "Дзержинского",
+      "number": "53",
+      "index": "299001"
+    }
+  }
+]

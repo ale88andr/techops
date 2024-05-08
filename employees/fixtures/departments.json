@@ -1,0 +1,418 @@
+[
+  {
+    "model": "employees.department",
+    "pk": 1,
+    "fields": {
+      "name": "Отдел дистанционного обслуживания клиентов",
+      "structure": 5
+    }
+  },
+  {
+    "model": "employees.department",
+    "pk": 2,
+    "fields": {
+      "name": "Группа организации работы клиентских служб",
+      "structure": 5
+    }
+  },
+  {
+    "model": "employees.department",
+    "pk": 3,
+    "fields": {
+      "name": "Клиентская служба (на правах отдела) № 1",
+      "structure": 5
+    }
+  },
+  {
+    "model": "employees.department",
+    "pk": 4,
+    "fields": {
+      "name": "Клиентская служба (на правах отдела) № 2",
+      "structure": 5
+    }
+  },
+  {
+    "model": "employees.department",
+    "pk": 5,
+    "fields": {
+      "name": "Клиентская служба (на правах отдела) № 3",
+      "structure": 5
+    }
+  },
+  {
+    "model": "employees.department",
+    "pk": 6,
+    "fields": {
+      "name": "Клиентская служба (на правах отдела) № 4",
+      "structure": 5
+    }
+  },
+  {
+    "model": "employees.department",
+    "pk": 7,
+    "fields": {
+      "name": "Руководство УОРКС",
+      "structure": 5
+    }
+  },
+  {
+    "model": "employees.department",
+    "pk": 8,
+    "fields": {
+      "name": "Руководство УУП",
+      "structure": 6
+    }
+  },
+  {
+    "model": "employees.department",
+    "pk": 9,
+    "fields": {
+      "name": "Отдел организации назначения и перерасчета пенсий",
+      "structure": 6
+    }
+  },
+  {
+    "model": "employees.department",
+    "pk": 10,
+    "fields": {
+      "name": "Отдел установления пенсий",
+      "structure": 6
+    }
+  },
+  {
+    "model": "employees.department",
+    "pk": 11,
+    "fields": {
+      "name": "Отдел контроля установления пенсий",
+      "structure": 6
+    }
+  },
+  {
+    "model": "employees.department",
+    "pk": 12,
+    "fields": {
+      "name": "Отдел оценки пенсионных прав застрахованных лиц и заблаговременной работы",
+      "structure": 6
+    }
+  },
+  {
+    "model": "employees.department",
+    "pk": 13,
+    "fields": {
+      "name": "Группа установления выплат за счет средств пенсионных накоплений",
+      "structure": 6
+    }
+  },
+  {
+    "model": "employees.department",
+    "pk": 14,
+    "fields": {
+      "name": "Группа установления пенсий с учетом специального стажа",
+      "structure": 6
+    }
+  },
+  {
+    "model": "employees.department",
+    "pk": 15,
+    "fields": {
+      "name": "Руководство УУСВ",
+      "structure": 2
+    }
+  },
+  {
+    "model": "employees.department",
+    "pk": 16,
+    "fields": {
+      "name": "Отдел организации социальных выплат",
+      "structure": 2
+    }
+  },
+  {
+    "model": "employees.department",
+    "pk": 17,
+    "fields": {
+      "name": "Отдел установления социальных выплат",
+      "structure": 2
+    }
+  },
+  {
+    "model": "employees.department",
+    "pk": 18,
+    "fields": {
+      "name": "Отдел установления материнского (семейного) капитала",
+      "structure": 2
+    }
+  },
+  {
+    "model": "employees.department",
+    "pk": 19,
+    "fields": {
+      "name": "Руководство УПУиАСВ",
+      "structure": 4
+    }
+  },
+  {
+    "model": "employees.department",
+    "pk": 20,
+    "fields": {
+      "name": "Отдел регистрации и учета страхователей",
+      "structure": 4
+    }
+  },
+  {
+    "model": "employees.department",
+    "pk": 21,
+    "fields": {
+      "name": "Отдел организации персонифицированного учета и администрирования страховых взносов",
+      "structure": 4
+    }
+  },
+  {
+    "model": "employees.department",
+    "pk": 22,
+    "fields": {
+      "name": "Отдел персонифицированного учета и администрирования страховых взносов",
+      "structure": 4
+    }
+  },
+  {
+    "model": "employees.department",
+    "pk": 23,
+    "fields": {
+      "name": "Отдел аудита баз данных персонифицированного учета и страхователей",
+      "structure": 4
+    }
+  },
+  {
+    "model": "employees.department",
+    "pk": 24,
+    "fields": {
+      "name": "Группа выездных проверок",
+      "structure": 4
+    }
+  },
+  {
+    "model": "employees.department",
+    "pk": 25,
+    "fields": {
+      "name": "Руководство УВПиСВ",
+      "structure": 3
+    }
+  },
+  {
+    "model": "employees.department",
+    "pk": 26,
+    "fields": {
+      "name": "Отдел организации выплаты пенсий и социальных выплат",
+      "structure": 3
+    }
+  },
+  {
+    "model": "employees.department",
+    "pk": 27,
+    "fields": {
+      "name": "Отдел выплаты пенсий и социальных выплат",
+      "structure": 3
+    }
+  },
+  {
+    "model": "employees.department",
+    "pk": 28,
+    "fields": {
+      "name": "Отдел контроля выплат",
+      "structure": 3
+    }
+  },
+  {
+    "model": "employees.department",
+    "pk": 29,
+    "fields": {
+      "name": "Отдел ведения информационных данных и социальных регистров",
+      "structure": 3
+    }
+  },
+  {
+    "model": "employees.department",
+    "pk": 30,
+    "fields": {
+      "name": "Руководство",
+      "structure": 1
+    }
+  },
+  {
+    "model": "employees.department",
+    "pk": 31,
+    "fields": {
+      "name": "Специалисты при руководстве",
+      "structure": 1
+    }
+  },
+  {
+    "model": "employees.department",
+    "pk": 32,
+    "fields": {
+      "name": "Отдел информационных технологий",
+      "structure": 1
+    }
+  },
+  {
+    "model": "employees.department",
+    "pk": 33,
+    "fields": {
+      "name": "Отдел казначейства",
+      "structure": 1
+    }
+  },
+  {
+    "model": "employees.department",
+    "pk": 34,
+    "fields": {
+      "name": "Бюджетный отдел",
+      "structure": 1
+    }
+  },
+  {
+    "model": "employees.department",
+    "pk": 35,
+    "fields": {
+      "name": "Юридический отдел",
+      "structure": 1
+    }
+  },
+  {
+    "model": "employees.department",
+    "pk": 36,
+    "fields": {
+      "name": "Отдел по осуществлению закупок",
+      "structure": 1
+    }
+  },
+  {
+    "model": "employees.department",
+    "pk": 37,
+    "fields": {
+      "name": "Отдел назначения и осуществления страховых выплат застрахованным гражданам",
+      "structure": 1
+    }
+  },
+  {
+    "model": "employees.department",
+    "pk": 38,
+    "fields": {
+      "name": "Отдел обеспечения инвалидов техническими средствами реабилитации",
+      "structure": 1
+    }
+  },
+  {
+    "model": "employees.department",
+    "pk": 39,
+    "fields": {
+      "name": "Группа по обеспечению санаторно-курортного лечения льготных категорий граждан",
+      "structure": 1
+    }
+  },
+  {
+    "model": "employees.department",
+    "pk": 40,
+    "fields": {
+      "name": "Отдел кадров",
+      "structure": 1
+    }
+  },
+  {
+    "model": "employees.department",
+    "pk": 41,
+    "fields": {
+      "name": "Общий отдел",
+      "structure": 1
+    }
+  },
+  {
+    "model": "employees.department",
+    "pk": 42,
+    "fields": {
+      "name": "Отдел по работе с обращениями граждан, застрахованных лиц, организаций и страхователей",
+      "structure": 1
+    }
+  },
+  {
+    "model": "employees.department",
+    "pk": 43,
+    "fields": {
+      "name": "Группа по взаимодействию со средствами массовой информации и связям с общественностью",
+      "structure": 1
+    }
+  },
+  {
+    "model": "employees.department",
+    "pk": 44,
+    "fields": {
+      "name": "Контрольно-ревизионный отдел",
+      "structure": 1
+    }
+  },
+  {
+    "model": "employees.department",
+    "pk": 45,
+    "fields": {
+      "name": "Отдел межведомственного взаимодействия",
+      "structure": 1
+    }
+  },
+  {
+    "model": "employees.department",
+    "pk": 46,
+    "fields": {
+      "name": "Группа контроля осуществления страховых выплат № 1",
+      "structure": 1
+    }
+  },
+  {
+    "model": "employees.department",
+    "pk": 47,
+    "fields": {
+      "name": "Группа контроля осуществления страховых выплат № 2",
+      "structure": 1
+    }
+  },
+  {
+    "model": "employees.department",
+    "pk": 48,
+    "fields": {
+      "name": "Отдел организационно-технической и криптографической защиты информации",
+      "structure": 1
+    }
+  },
+  {
+    "model": "employees.department",
+    "pk": 49,
+    "fields": {
+      "name": "Отдел организации страхования профессиональных рисков",
+      "structure": 1
+    }
+  },
+  {
+    "model": "employees.department",
+    "pk": 50,
+    "fields": {
+      "name": "Отдел материально-технического обеспечения",
+      "structure": 1
+    }
+  },
+  {
+    "model": "employees.department",
+    "pk": 51,
+    "fields": {
+      "name": "Группа установления мер социальной поддержки семьям с детьми",
+      "structure": 1
+    }
+  },
+  {
+    "model": "employees.department",
+    "pk": 52,
+    "fields": {
+      "name": "Режимно-секретная группа",
+      "structure": 1
+    }
+  }
+]
