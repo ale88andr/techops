@@ -1,42 +1,50 @@
 [
-    {
-      "model": "employees.structure",
-      "pk": 1,
-      "fields": {
-        "name": "Отделение",
-        "organisation": 1
-      }
-    },
-    {
-        "model": "employees.structure",
-        "pk": 2,
-        "fields": {
-          "name": "Управление установления социальных выплат",
-          "organisation": 1
-        }
-      },
-      {
-        "model": "employees.structure",
-        "pk": 3,
-        "fields": {
-          "name": "Управление выплаты пенсий и социальных выплат",
-          "organisation": 1
-        }
-      },
-      {
-        "model": "employees.structure",
-        "pk": 4,
-        "fields": {
-          "name": "Управление персонифицированного учета и администрирования страховых взносов",
-          "organisation": 1
-        }
-      },
-      {
-        "model": "employees.structure",
-        "pk": 5,
-        "fields": {
-          "name": "Управление организации работы клиентских служб",
-          "organisation": 1
-        }
-      }
-  ]
+  {
+    "model": "employees.structure",
+    "pk": 1,
+    "fields": {
+      "name": "Отделение",
+      "organisation": 1
+    }
+  },
+  {
+    "model": "employees.structure",
+    "pk": 2,
+    "fields": {
+      "name": "Управление установления социальных выплат",
+      "organisation": 1
+    }
+  },
+  {
+    "model": "employees.structure",
+    "pk": 3,
+    "fields": {
+      "name": "Управление выплаты пенсий и социальных выплат",
+      "organisation": 1
+    }
+  },
+  {
+    "model": "employees.structure",
+    "pk": 4,
+    "fields": {
+      "name": "Управление персонифицированного учета и администрирования страховых взносов",
+      "organisation": 1
+    }
+  },
+  {
+    "model": "employees.structure",
+    "pk": 5,
+    "fields": {
+      "name": "Управление организации работы клиентских служб",
+      "organisation": 1
+    }
+  },
+  {
+    "model": "employees.structure",
+    "pk": 6,
+    "fields": {
+      "name": "Управление установления пенсий",
+      "organisation": 1
+    }
+  }
+]
