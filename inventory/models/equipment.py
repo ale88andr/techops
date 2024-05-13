@@ -6,6 +6,11 @@ from inventory.models.equipment_model import EquipmentModel
 
 
 class Equipment(models.Model):
+    class EquipmentStatuses(models.IntegerChoices):
+        USE = 1, 'В эксплуатации'
+        WRITEOFF = 2, 'Списан'
+        REPAIR = 3, 'В ремонте'
+
     serial = models.CharField(
         'Серийный номер',
         max_length=50,
@@ -44,6 +49,11 @@ class Equipment(models.Model):
         on_delete=models.RESTRICT,
         related_name='created_by',
         verbose_name='Добавил пользователь'
+    )
+    status = models.SmallIntegerField(
+        'Статус оборудования',
+        choices=EquipmentStatuses,
+        default=EquipmentStatuses.USE
     )
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
