@@ -9,10 +9,6 @@ from employees.models.structures import Structure
 from employees.models.workers import Worker
 
 
-admin.site.site_header = 'TechOps'
-admin.site.empty_value_display = '(Нет данных)'
-
-
 @admin.register(Organisation)
 class OrganisationAdmin(admin.ModelAdmin):
     list_display = ('short_name', 'address')
