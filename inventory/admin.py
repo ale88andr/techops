@@ -39,6 +39,7 @@ class EquipmentAdmin(admin.ModelAdmin):
     list_select_related = ('owner', 'equipment_model')
     search_fields = ['inv', 'serial', ]
     list_filter = ['status', 'equipment_model__equipment_type']
+    radio_fields = {'status': admin.HORIZONTAL}
 
     def save_model(self, request, obj, form, change):
         obj.created_by = request.user
