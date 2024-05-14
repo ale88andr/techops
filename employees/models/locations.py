@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib import admin
 from django.core.exceptions import ValidationError
 
+from employees.constants import LOCATION_NAME, LOCATION_NAME_PLURAL
 from employees.models.buildings import Building
 
 
@@ -35,6 +36,6 @@ class Location(models.Model):
         return self.name
 
     class Meta:
-        verbose_name = 'Рабочее место'
-        verbose_name_plural = 'Рабочие места'
+        verbose_name = LOCATION_NAME
+        verbose_name_plural = LOCATION_NAME_PLURAL
         ordering = ('building', 'cabinet', )

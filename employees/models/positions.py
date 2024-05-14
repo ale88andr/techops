@@ -1,5 +1,7 @@
 from django.db import models
 
+from employees.constants import POSITION_NAME, POSITION_NAME_PLURAL
+
 
 class Position(models.Model):
     name = models.CharField('Наименование', max_length=50)
@@ -8,6 +10,6 @@ class Position(models.Model):
         return self.name
 
     class Meta:
-        verbose_name = 'Должность'
-        verbose_name_plural = 'Должности'
+        verbose_name = POSITION_NAME
+        verbose_name_plural = POSITION_NAME_PLURAL
         ordering = ('name', )

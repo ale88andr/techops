@@ -4,15 +4,19 @@ from django.db import models
 from django.utils.functional import cached_property
 from django.utils.html import format_html
 
-
-# @TODO Move to settings or env and rename
-UPLOAD_DIR = 'images/manufacturer/logo'
+from inventory.constants import (
+    EQUIPMENT_MANUFACTURER_NAME,
+    EQUIPMENT_MANUFACTURER_NAME_PLURAL,
+    LOGO_IMG_WIDTH,
+    MANUFACTURER_MEDIA_DIR,
+    NO_IMAGE_HTML
+)
 
 
 """ Change original file name to Manufacturer model field 'name' """
 def wrapper(instance, filename):
     ext = filename.split('.')[-1]
-    return os.path.join(UPLOAD_DIR, f'{instance.name}.{ext}')
+    return os.path.join(MANUFACTURER_MEDIA_DIR, f'{instance.name}.{ext}')
 
 
 class EquipmentManufacturer(models.Model):
@@ -28,18 +32,17 @@ class EquipmentManufacturer(models.Model):
         blank=True
     )
 
-    # @TODO remove hardcoded values
     @cached_property
     def display_logo(self):
-        if self.logo:
-            return format_html(f'<img src="{self.logo.url}" width="45">')
-        return format_html('<strong>Изображение отсутствует<strong>')
+        return format_html(
+            f'<img src="{self.logo.url}" width="{LOGO_IMG_WIDTH}">' if self.logo else NO_IMAGE_HTML
+        )
 
     def __str__(self):
         return self.name
 
     class Meta:
         db_table = 'inventory_equipment_manufacturer'
-        verbose_name = 'Производителя оборудования'
-        verbose_name_plural = 'Производители оборудования'
+        verbose_name = EQUIPMENT_MANUFACTURER_NAME
+        verbose_name_plural = EQUIPMENT_MANUFACTURER_NAME_PLURAL
         ordering = ('name', )

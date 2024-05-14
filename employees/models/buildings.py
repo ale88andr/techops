@@ -1,6 +1,8 @@
 from django.db import models
 from django.contrib import admin
 
+from employees.constants import BUILDING_NAME, BUILDING_NAME_PLURAL
+
 
 class Building(models.Model):
     name = models.CharField('Наименование', max_length=100, null=True, blank=True)
@@ -22,6 +24,6 @@ class Building(models.Model):
         return self.address
 
     class Meta:
-        verbose_name = 'Здание'
-        verbose_name_plural = 'Здания'
+        verbose_name = BUILDING_NAME
+        verbose_name_plural = BUILDING_NAME_PLURAL
         ordering = ('city', 'index', )

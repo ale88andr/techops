@@ -1,5 +1,7 @@
 from django.db import models
 
+from inventory.constants import EQUIPMENT_TYPE_NAME, EQUIPMENT_TYPE_NAME_PLURAL
+
 
 class EquipmentType(models.Model):
     name = models.CharField(
@@ -14,6 +16,6 @@ class EquipmentType(models.Model):
 
     class Meta:
         db_table = 'inventory_equipment_type'
-        verbose_name = 'Тип оборудования'
-        verbose_name_plural = 'Типы оборудования'
+        verbose_name = EQUIPMENT_TYPE_NAME
+        verbose_name_plural = EQUIPMENT_TYPE_NAME_PLURAL
         ordering = ('name', )

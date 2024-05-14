@@ -1,5 +1,6 @@
 from django.db import models
 
+from employees.constants import DEPARTMENT_NAME, DEPARTMENT_NAME_PLURAL
 from employees.models.structures import Structure
 
 
@@ -16,6 +17,6 @@ class Department(models.Model):
         return self.name
 
     class Meta:
-        verbose_name = 'Отдел'
-        verbose_name_plural = 'Отделы'
+        verbose_name = DEPARTMENT_NAME
+        verbose_name_plural = DEPARTMENT_NAME_PLURAL
         ordering = ('name', )

@@ -2,6 +2,7 @@ from django.conf import settings
 from django.db import models
 
 from employees.models.workers import Worker
+from inventory.constants import EQUIPMENT_NAME, EQUIPMENT_NAME_PLURAL
 from inventory.models.equipment_model import EquipmentModel
 
 
@@ -62,6 +63,6 @@ class Equipment(models.Model):
         return f'[{self.inv}] {self.equipment_model}'
 
     class Meta:
-        verbose_name = 'Оборудование'
-        verbose_name_plural = 'Оборудование'
+        verbose_name = EQUIPMENT_NAME
+        verbose_name_plural = EQUIPMENT_NAME_PLURAL
         ordering = ('inv', )

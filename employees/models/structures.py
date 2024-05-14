@@ -1,5 +1,6 @@
 from django.db import models
 
+from employees.constants import STRUCTURE_NAME, STRUCTURE_NAME_PLURAL
 from employees.models.organisations import Organisation
 
 
@@ -16,6 +17,6 @@ class Structure(models.Model):
         return self.name
 
     class Meta:
-        verbose_name = 'Организационную структуру'
-        verbose_name_plural = 'Организационные структуры'
+        verbose_name = STRUCTURE_NAME
+        verbose_name_plural = STRUCTURE_NAME_PLURAL
         ordering = ('name', )
