@@ -1,4 +1,5 @@
 from django.contrib import admin
+from django.contrib.admin import TabularInline
 from django.db.models import Count
 
 from employees.models.buildings import Building
@@ -8,6 +9,12 @@ from employees.models.organisations import Organisation
 from employees.models.positions import Position
 from employees.models.structures import Structure
 from employees.models.workers import Worker
+from inventory.models.equipment import Equipment
+
+
+class WorkerEquipmentsInline(TabularInline):
+    model = Equipment
+    fields = ('equipment_model', 'status', )
 
 
 @admin.register(Organisation)
@@ -53,6 +60,10 @@ class WorkerAdmin(admin.ModelAdmin):
     list_display = ('short_name', 'position', 'department', 'equipments_count')
     list_filter = ['department', 'position', 'location']
 
+    inlines = [
+        WorkerEquipmentsInline
+    ]
+
     @admin.display(description="Кол-во оборудования")
     def equipments_count(self, obj):
         return obj.equipments_count
@@ -61,5 +72,5 @@ class WorkerAdmin(admin.ModelAdmin):
         queryset = Worker.objects.annotate(
             equipments_count = Count('owner_equipments')
         )
-        
+
         return queryset
