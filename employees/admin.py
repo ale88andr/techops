@@ -1,4 +1,5 @@
 from django.contrib import admin
+from django.db.models import Count
 
 from employees.models.buildings import Building
 from employees.models.departments import Department
@@ -49,5 +50,16 @@ class LocationAdmin(admin.ModelAdmin):
 
 @admin.register(Worker)
 class WorkerAdmin(admin.ModelAdmin):
-    list_display = ('short_name', 'position', 'department')
+    list_display = ('short_name', 'position', 'department', 'equipments_count')
     list_filter = ['department', 'position', 'location']
+
+    @admin.display(description="Кол-во оборудования")
+    def equipments_count(self, obj):
+        return obj.equipments_count
+
+    def get_queryset(self, request):
+        queryset = Worker.objects.annotate(
+            equipments_count = Count('owner_equipments')
+        )
+        
+        return queryset
