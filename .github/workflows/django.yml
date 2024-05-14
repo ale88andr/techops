@@ -1,4 +1,4 @@
-name: Django CI Dev
+name: Django CI
 
 on:
   push:
@@ -15,6 +15,9 @@ jobs:
       matrix:
         python-version: [3.11, 3.12]
 
+    env: # Добавляем переменную окружения SECRET_KEY
+      SECRET_KEY: ${{ secrets.SECRET_KEY }}
+
     steps:
     - uses: actions/checkout@v4
     - name: Set up Python ${{ matrix.python-version }}
@@ -25,6 +28,8 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements/dev.txt
+    - name: Set Secret Key
+      run: echo "SECRET_KEY=${{ secrets.SECRET_KEY }}" >> $GITHUB_ENV
     - name: Run Tests
       run: |
         python manage.py test
