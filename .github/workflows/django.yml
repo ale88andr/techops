@@ -5,6 +5,7 @@ on:
     #branches: [ main, dev ]
   pull_request:
     branches: [ main ]
+<<<<<<< HEAD
 
 jobs:
   test-django-app:
@@ -15,9 +16,21 @@ jobs:
       matrix:
         python-version: ["3.12"]
 
+=======
+    
+jobs:
+  test-django-app:
+    runs-on: ubuntu-latest
+    
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: [3.10]
+
+>>>>>>> e611f4d0996f611e06c57e8b525fb00f3ae4d1c9
     env:
       SECRET_KEY: ${{ secrets.SECRET_KEY }}
-
+        
     steps:
       - uses: actions/checkout@v4
         with:
