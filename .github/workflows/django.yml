@@ -32,4 +32,5 @@ jobs:
           if [ -f requirements/dev.txt ]; then pip install -r requirements/dev.txt; fi
       - name: Run Django test
         run: |
+          export SECRET_KEY=${{ secrets.SECRET_KEY }}
           python manage.py test
