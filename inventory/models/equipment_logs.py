@@ -40,7 +40,7 @@ class EquipmentLog(models.Model):
 
     @property
     def log(self):
-        log_list = [f'Дата: {self._format_created_at()}', self.action]
+        log_list = [self.action, self._format_created_at()]
         if self.target_field:
             log_list.append(f'поле "{self.target_field}"')
             log_list.append(f'старое значение: "{self.old_value}"')

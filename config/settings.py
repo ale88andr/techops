@@ -8,7 +8,7 @@ environ.Env.read_env(env.str(root(), '.env'))
 
 BASE_DIR = root()
 
-SECRET_KEY = env.str('SECRET_KEY')
+SECRET_KEY = env.str('SECRET_KEY', default=os.environ.get('SECRET_KEY'))
 
 DEBUG = env.bool('DEBUG', default=False)
 
