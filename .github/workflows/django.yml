@@ -1,8 +1,6 @@
-# django.yml
 name: Django Tests
-on:
-  pull_request:
-    branches: [ main, dev ]
+
+on: [pull-request]
 
 jobs:
   build:
