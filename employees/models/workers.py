@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib import admin
 
+from employees.constants import WORKER_NAME, WORKER_NAME_PLURAL
 from employees.models.departments import Department
 from employees.models.locations import Location
 from employees.models.positions import Position
@@ -46,6 +47,6 @@ class Worker(models.Model):
         return self.short_name
 
     class Meta:
-        verbose_name = 'Сотрудника'
-        verbose_name_plural = 'Сотрудники'
+        verbose_name = WORKER_NAME
+        verbose_name_plural = WORKER_NAME_PLURAL
         ordering = ('name', )

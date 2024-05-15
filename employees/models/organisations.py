@@ -1,5 +1,7 @@
 from django.db import models
 
+from employees.constants import ORGANISATION_NAME, ORGANISATION_NAME_PLURAL
+
 
 class Organisation(models.Model):
     name = models.CharField('Наименование', max_length=255)
@@ -11,6 +13,6 @@ class Organisation(models.Model):
         return self.short_name
 
     class Meta:
-        verbose_name = 'Организацию'
-        verbose_name_plural = 'Организации'
+        verbose_name = ORGANISATION_NAME
+        verbose_name_plural = ORGANISATION_NAME_PLURAL
         ordering = ('name', )

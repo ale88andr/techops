@@ -1,5 +1,6 @@
 from django.db import models
 
+from inventory.constants import EQUIPMENT_MODEL_NAME, EQUIPMENT_MODEL_NAME_PLURAL
 from inventory.models.equipment_manufacturer import EquipmentManufacturer
 from inventory.models.equipment_type import EquipmentType
 
@@ -31,6 +32,6 @@ class EquipmentModel(models.Model):
 
     class Meta:
         db_table = 'inventory_equipment_model'
-        verbose_name = 'Модель оборудования'
-        verbose_name_plural = 'Модели оборудования'
+        verbose_name = EQUIPMENT_MODEL_NAME
+        verbose_name_plural = EQUIPMENT_MODEL_NAME_PLURAL
         ordering = ('equipment_type', 'manufacturer', 'name', )
