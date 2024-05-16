@@ -1,3 +1,5 @@
+"""Модуль описывающий модель Django"""
+
 from django.db import models
 from django.contrib import admin
 from django.core.exceptions import ValidationError
@@ -7,6 +9,16 @@ from employees.models.buildings import Building
 
 
 class Location(models.Model):
+    """Модель Django описывающая локацию рабочего места
+
+    Attributes:
+        room (str): Наименование помещения, в котором расположено рабочее место
+        cabinet (int): Номер кабинета, в котором расположено рабочее место
+        floor (int): Этаж на котором расположено рабочее место
+        building (int): FK->Building, здание в котором расположено рабочее место
+
+    """
+
     room = models.CharField('Помещение', max_length=25, null=True, blank=True)
     cabinet = models.PositiveIntegerField('Кабинет', null=True, blank=True)
     floor = models.PositiveIntegerField('Этаж', null=True, blank=True)
@@ -20,6 +32,7 @@ class Location(models.Model):
     @property
     @admin.display(description="Рабочее место",)
     def name(self):
+        """Функция, возвращающая строковое представление рабочего места"""
         location = f'Кабинет №{self.cabinet}' if self.cabinet else f'Помещение "{self.room}"'
         floor = f' (Этаж: {self.floor})' if self.floor else ''
         return f'{location} по адресу: {self.building.address}{floor}'
@@ -30,7 +43,7 @@ class Location(models.Model):
                 'Одно из полей "Помещение" или "Кабинет" должно быть заполнено!',
                 code="invalid"
             )
-        super(Location, self).clean()
+        super().clean()
 
     def __str__(self):
         return self.name

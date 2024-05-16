@@ -1,9 +1,18 @@
+"""Модуль описывающий модель Django"""
+
 from django.db import models
 
 from employees.constants import POSITION_NAME, POSITION_NAME_PLURAL
 
 
 class Position(models.Model):
+    """Модель Django описывающая должности сотрудников
+
+    Attributes:
+        name (str): Наименование должности.
+
+    """
+
     name = models.CharField('Наименование', max_length=50)
 
     def __str__(self):

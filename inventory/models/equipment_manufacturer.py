@@ -1,3 +1,5 @@
+"""Модуль описывающий модель Django"""
+
 import os
 
 from django.db import models
@@ -20,6 +22,14 @@ def wrapper(instance, filename):
 
 
 class EquipmentManufacturer(models.Model):
+    """Модель Django описывающая производителя оборудования
+
+    Attributes:
+        name (str): Наименование производителя.
+        logo (str): Логотип производителя.
+
+    """
+
     name = models.CharField(
         'Производитель',
         max_length=50,
@@ -34,6 +44,7 @@ class EquipmentManufacturer(models.Model):
 
     @cached_property
     def display_logo(self):
+        """Функция, возвращающая HTML тег img с логотипом"""
         return format_html(
             f'<img src="{self.logo.url}" width="{LOGO_IMG_WIDTH}">' if self.logo else NO_IMAGE_HTML
         )

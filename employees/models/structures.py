@@ -1,3 +1,5 @@
+"""Модуль описывающий модель Django"""
+
 from django.db import models
 
 from employees.constants import STRUCTURE_NAME, STRUCTURE_NAME_PLURAL
@@ -5,6 +7,14 @@ from employees.models.organisations import Organisation
 
 
 class Structure(models.Model):
+    """Модель Django описывающая организационную структуру
+
+    Attributes:
+        name (str): Наименование структуры.
+        organisation (int): FK->Organisation, Организация к которой относится структура.
+
+    """
+
     name = models.CharField('Наименование', max_length=255)
     organisation = models.ForeignKey(
         to=Organisation,

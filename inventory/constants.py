@@ -1,3 +1,5 @@
+"""Module providing an inventory constants."""
+
 MANUFACTURER_MEDIA_DIR = 'images/manufacturer/logo'
 NO_IMAGE_HTML = '<strong>Изображение отсутствует<strong>'
 LOGO_IMG_WIDTH = 45

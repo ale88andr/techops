@@ -1,3 +1,5 @@
+"""Module providing an employee constants."""
+
 ####################
 # MODELS META
 ####################

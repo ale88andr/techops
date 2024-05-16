@@ -1,3 +1,5 @@
+"""Общие настройки для админ панели Django"""
+
 from django.contrib import admin
 
 from common.constants import PROJECT_NAME, DEFAULT_NULL_VALUE
