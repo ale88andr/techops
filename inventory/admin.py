@@ -69,4 +69,4 @@ class EquipmentAdmin(admin.ModelAdmin):
 class EquipmentLogAdmin(admin.ModelAdmin):
     """Class representing admin settings for an equipment log model"""
     list_display = ('__str__', 'created_by', 'created_at')
-    readonly_fields = ('__str__', 'created_by', 'created_at')
+    readonly_fields = [field.name for field in EquipmentLog._meta.fields]
