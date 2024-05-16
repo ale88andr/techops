@@ -1,3 +1,5 @@
+"""Модуль описывающий модель Django"""
+
 from django.db import models
 from django.contrib import admin
 
@@ -8,6 +10,20 @@ from employees.models.positions import Position
 
 
 class Worker(models.Model):
+    """Модель Django описывающая сотрудника организации
+
+    Attributes:
+        surname (str): Фамилия.
+        name (str): Имя.
+        patronymic (str): Отчество.
+        phone (str): Номер телефона.
+        domain_sid (str): Учетная запись домена
+        position (int):  FK->Position, Должность сотрудника.
+        location (int):  FK->Location, Рабочее место сотрудника.
+        department (int):  FK->Department, Отдел сотрудника.
+
+    """
+
     surname = models.CharField('Фамилия', max_length=20)
     name = models.CharField('Имя', max_length=20)
     patronymic = models.CharField('Отчество', max_length=20, null=True, blank=True)
@@ -34,12 +50,14 @@ class Worker(models.Model):
 
     @property
     def full_name(self):
+        """Функция, возвращающая полное имя сотрудника"""
         patronymic = self.patronymic if self.patronymic else ''
         return f'{self.surname} {self.name} {patronymic}'
 
     @property
     @admin.display(description="Сотрудник",)
     def short_name(self):
+        """Функция, возвращающая фамилию и инициалы сотрудника"""
         patronymic = f'{self.patronymic[0]}.' if self.patronymic else ''
         return f'{self.surname} {self.name[0]}. {patronymic}'
 

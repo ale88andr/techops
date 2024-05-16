@@ -1,3 +1,5 @@
+"""Module providing django settings."""
+
 import os
 import environ
 

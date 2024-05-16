@@ -1,3 +1,5 @@
+"""Модуль описывающий модель Django"""
+
 from django.conf import settings
 from django.db import models
 
@@ -8,10 +10,30 @@ from inventory.models.equipment_model import EquipmentModel
 
 
 class Equipment(models.Model):
+    """Модель Django описывающая оборудование
+
+    Attributes:
+        serial (str): Серийный номер.
+        inv (str): Инвентарный номер.
+        owner (str): Владелец.
+        equipment_model (str): Модель оборудования.
+        parent (int): FK->Equipment, Оборудование в составе.
+        created_by (int): FK->User, Автор записи.
+        status (int): Статус оборудования.
+        logs (int): FK->M2M(EquipmentLog), Аудит.
+        created_at (datetime): Дата создания.
+        updated_at (datetime): Дата обновления.
+
+    """
+
+
     class EquipmentStatuses(models.IntegerChoices):
+        """Класс IntegerChoices для описания статусов оборудования"""
+
         USE = 1, 'В эксплуатации'
         WRITEOFF = 2, 'Списан'
         REPAIR = 3, 'В ремонте'
+
 
     serial = models.CharField(
         'Серийный номер',

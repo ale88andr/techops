@@ -1,3 +1,5 @@
+"""Модуль описывающий модель Django"""
+
 from django.conf import settings
 from django.contrib import admin
 from django.db import models
@@ -7,6 +9,18 @@ from inventory.constants import EQUIPMENT_LOG_NAME, EQUIPMENT_LOG_NAME_PLURAL
 
 
 class EquipmentLog(models.Model):
+    """Модель Django описывающая историю оборудования
+
+    Attributes:
+        action (str): Действие над записью.
+        target_field (str): Изменяемый параметр.
+        old_value (str): Предыдущее значение.
+        new_value (str): Текущее значение
+        created_by (int): Пользователь проводивший изменение.
+        created_at (datetime): Дата проведения изменений.
+
+    """
+
     action = models.CharField('Событие', max_length=250)
     target_field = models.CharField(
         'Измененный параметр',
@@ -40,6 +54,7 @@ class EquipmentLog(models.Model):
 
     @property
     def log(self):
+        """Функция, возвращающая итоговую строку аудита"""
         log_list = [self.action, self._format_created_at()]
         if self.target_field:
             log_list.append(f'поле "{self.target_field}"')

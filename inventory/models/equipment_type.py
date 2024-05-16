@@ -1,9 +1,18 @@
+"""Модуль описывающий модель Django"""
+
 from django.db import models
 
 from inventory.constants import EQUIPMENT_TYPE_NAME, EQUIPMENT_TYPE_NAME_PLURAL
 
 
 class EquipmentType(models.Model):
+    """Модель Django описывающая тип оборудования
+
+    Attributes:
+        name (str): Наименование здания.
+
+    """
+
     name = models.CharField(
         'Тип оборудования',
         max_length=50,
